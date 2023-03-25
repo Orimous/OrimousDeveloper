@@ -177,6 +177,83 @@ nav ul a.active{
     color: #0ef;
 }
 
+.burger__menu{
+    display: none;
+}
+
+.burger__menu__icon{
+    display: block;
+    width: 30px;
+    height: 18px;
+    position: relative;
+    z-index: 1000;
+    cursor: pointer;
+}
+.burger__menu__icon span{
+    display: block;
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.2s;
+}
+.burger__menu__icon span:first-child {
+    top: 0;
+
+}
+.burger__menu__icon span:last-child {
+    top: auto;
+    bottom: 0;
+}
+.burger__menu__icon.active span{
+    transform: scale(0);
+}
+.burger__menu__icon.active span:first-child{
+    transform: rotate(-45deg);
+    top: calc(50% - 1px);
+}
+.burger__menu__icon.active span:last-child{
+    transform: rotate(45deg);
+    bottom: calc(50% - 1px);
+}
+.burger__menu__body{
+    display: none;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all 0.2s;
+}
+.burger__menu__body.active{
+    left: 0;
+    display: block;
+}
+.burger__menu__list{
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    padding: 30px;
+    gap: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #42a1cc;
+    justify-content: center;
+    align-items: center;
+}
+.burger__menu__link{
+    display: block;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 70px;
+}
+.burger__menu__link:hover{
+    text-decoration: underline;
+}
+
 main{
     padding: 0 10%;
     padding-top: 140px;
@@ -407,13 +484,29 @@ footer p{
     .container{
         max-width: 960px;
     }
+    nav{
+        max-width: 960px;
+    }
 }
 
 /* Medium: 768px - 991px */
 @media (max-width: 991px){
     .container{
         max-width: 720px;
-	margin: 0 auto;
+    }
+    nav{
+        max-width: 720px;
+    }
+    /* Index */
+    .like, .aboutLike{
+        width: 300px;
+    }
+    .about__content{
+        width: auto;
+    }
+    .portfolio__container img{
+        width: 250px;
+        height: 250px;
     }
 }
 
@@ -422,6 +515,48 @@ footer p{
     .container{
         max-width: 540px;
 		margin: 0 auto;
+    }
+    section{
+        padding-top: 0;
+        margin-top: 70px;
+    }
+    .logo{
+        padding-top: 20px;
+    }
+    .menu{
+        display: none;
+    }
+    .burger__menu{
+        display: block;
+    }
+    .burger__menu__list{
+        padding-top: 20px;
+        position: fixed;
+    }
+    nav{
+        padding: 0;
+        width: 540px;
+    }
+    /* Index*/
+    main{
+        align-items: start;
+        flex-direction: column-reverse;
+    }
+    .like{
+        margin: 0 auto;
+    }
+    .portfolio__wrapper{
+        flex-direction: column;
+        gap: 40px;
+    }
+    /*Android Developer*/
+    .projct__section{
+        padding: 100px;
+        margin: 0;
+    }
+    /*Motivation App*/
+    .app{
+        flex-direction: column;
     }
 }
 
@@ -432,6 +567,41 @@ footer p{
         padding: 0 15px;
         margin: 0;
     }
+    section{
+        margin: 0;
+        padding-top: 50px;
+    }
+    nav{
+        width: 300px;
+        margin: 0 auto;
+    }
+    /* Index*/
+    .like{
+        width: 270px;
+    }
+    .aboutLike{
+        display: none;
+    }
+    .about__content{
+        flex-direction: column;
+    }
+    .portfolio__container img{
+        width: 200px;
+        height: 200px;
+    }
+    .contact form{
+        width: 290px;
+    }
+    .contact form input, .contact form textarea{
+        width: 290px;
+    }
+    /*Android Developer*/
+    .projct__section{
+        padding: 100px;
+        margin: 0;
+    }
+    /*Motivation App*/
+
 }
 
 @keyframes slideRight {

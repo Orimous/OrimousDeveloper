@@ -14,15 +14,34 @@
     <header class="header" id="header">
         <div class="container">
             <nav>
-                <a href="">
+                <a href="index.html">
                     <img src="img/logo.svg" alt="Orimous" class="logo">
                 </a>
-                <ul>
+                <ul class="menu">
                     <li><a href="#header" class="active" style="--i:1">Home</a></li>
                     <li><a href="#about" style="--i:2">About</a></li>
                     <li><a href="#portfolio" style="--i:3">Portfolio</a></li>
                     <li><a href="#contact" style="--i:4">Contact</a></li>
                 </ul>
+                <div class="header__menu burger__menu">
+                    <div class="burger__menu__icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <nav class="burger__menu__body">
+                        <ul class="burger__menu__list">
+                            <li class="burger__menu__item"><a href="#header" class="burger__menu__link active">Home</a>
+                            </li>
+                            <li class="burger__menu__item"><a href="#about" class="burger__menu__link">About</a>
+                            </li>
+                            <li class="burger__menu__item"><a href="#portfolio" class="burger__menu__link">Portfolio</a>
+                            </li>
+                            <li class="burger__menu__item"><a href="#contact" class="burger__menu__link">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </nav>
             <main>
                 <div class="main__content">
@@ -32,11 +51,6 @@
                     <p>
                         I will make your dreams come true
                     </p>
-                    <div class="socialMedia">
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
-                    </div>
                 </div>
                 <img src="img/OrimousLike.gif" alt="" class="like">
             </main>
@@ -68,7 +82,7 @@
                 </div>
                 <div class="portfolio__container">
                     <a href="">
-                        <img src="img/androidDeveloper.png" alt="">
+                        <img src="img/webDeveloper.jpg" alt="">
                         <h3>Frontend Development</h3>
                     </a>
                 </div>

@@ -82,7 +82,6 @@
     border-radius: 9px;
 }
 
-
 body{
     font-family: 'Roboto';
     margin: 0;
@@ -101,7 +100,7 @@ body{
 }
 
 section{
-    padding-top: 150px;
+    padding-top: 100px;
 }
 
 h1{
@@ -124,6 +123,13 @@ h4{
     font-weight: 700;
 }
 
+h5{
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 25px;
+    padding-bottom: 5px;
+}
+
 ul{
     display: flex;
     gap: 25px;
@@ -144,8 +150,6 @@ a{
 
 nav{
     background: #1f242d;
-    position: fixed;
-    width: 1200px;
     padding: 20px 0;
     display: flex;
     align-items: center;
@@ -256,7 +260,6 @@ nav ul a.active{
 
 main{
     padding: 0 10%;
-    padding-top: 140px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -428,7 +431,12 @@ footer p{
     text-align: center;
 }
 
+.info__project a img{
+    margin: 0 auto;
+}
+
 .info__project{
+    display: flex;
     margin-top: 40px;
 }
 
@@ -458,9 +466,18 @@ footer p{
     gap: 10px;
 }
 
+.links{
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
 .app__down{
-    margin-top: 20px;
-    display: block;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
     transition: .3s;
     width: fit-content;
     padding: 10px 20px;
@@ -469,14 +486,24 @@ footer p{
     border-radius: 15px;
 }
 
+.app__down img{
+    width: 25px;
+    height: 25px;
+}
+
 .app__down:hover{
-    margin-top: 20px;
-    display: block;
-    width: fit-content;
-    padding: 10px 20px;
     color: #000;
     background: #fff;
-    border-radius: 15px;
+}
+
+footer a{
+    display: block;
+    color: #fff;
+    text-align: center;
+}
+
+footer a:hover{
+    color: #0ef;
 }
 
 /* Large: 992px - 1199px */
@@ -484,17 +511,11 @@ footer p{
     .container{
         max-width: 960px;
     }
-    nav{
-        max-width: 960px;
-    }
 }
 
 /* Medium: 768px - 991px */
 @media (max-width: 991px){
     .container{
-        max-width: 720px;
-    }
-    nav{
         max-width: 720px;
     }
     /* Index */
@@ -522,6 +543,7 @@ footer p{
     }
     .logo{
         padding-top: 20px;
+        height: 65px;
     }
     .menu{
         display: none;
@@ -535,7 +557,6 @@ footer p{
     }
     nav{
         padding: 0;
-        width: 540px;
     }
     /* Index*/
     main{
@@ -549,14 +570,17 @@ footer p{
         flex-direction: column;
         gap: 40px;
     }
-    /*Android Developer*/
-    .projct__section{
-        padding: 100px;
-        margin: 0;
-    }
     /*Motivation App*/
     .app{
         flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .links{
+        row-gap: 10px;
+        column-gap: 25px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
@@ -571,13 +595,9 @@ footer p{
         margin: 0;
         padding-top: 50px;
     }
-    nav{
-        width: 300px;
-        margin: 0 auto;
-    }
     /* Index*/
     .like{
-        width: 270px;
+        width: 100%;
     }
     .aboutLike{
         display: none;
@@ -590,18 +610,20 @@ footer p{
         height: 200px;
     }
     .contact form{
-        width: 290px;
+        width: 100%;
     }
     .contact form input, .contact form textarea{
-        width: 290px;
+        margin: 0 auto;
+        width: 90%;
     }
-    /*Android Developer*/
-    .projct__section{
-        padding: 100px;
-        margin: 0;
+    /*Andorid Portfolio*/
+    .projct__section h3{
+        font-size: 25px;
     }
-    /*Motivation App*/
-
+    .info__project{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @keyframes slideRight {
